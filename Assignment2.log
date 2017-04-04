@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.13)  4 APR 2017 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.9.12)  4 APR 2017 21:58
 entering extended mode
 **./Assignment2.tex
 (Assignment2.tex
@@ -569,13 +569,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \openout2 = `Question1.aux'.
 
- (Question1.tex)
+ (Question1.tex [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2])
 \openout2 = `Question2.aux'.
 
  (Question2.tex)
 \openout2 = `Question3.aux'.
 
- (Question3.tex)
+
+(Question3.tex)
 \openout2 = `Question4.aux'.
 
  (Question4.tex)
@@ -584,27 +587,31 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  (Question5.tex)
 \openout2 = `Question6.aux'.
 
-
-(Question6.tex) [1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+ (Question6.tex) [3]
 (Assignment2.aux (Question1.aux) (Question2.aux) (Question3.aux) (Question4.aux
 ) (Question5.aux) (Question6.aux)) ) 
 Here is how much of TeX's memory you used:
- 13146 strings out of 493334
- 255122 string characters out of 3136672
- 295920 words of memory out of 3000000
- 16383 multiletter control sequences out of 15000+200000
- 8584 words of font info for 33 fonts, out of 3000000 for 9000
+ 13156 strings out of 493334
+ 255228 string characters out of 3136672
+ 303920 words of memory out of 3000000
+ 16391 multiletter control sequences out of 15000+200000
+ 10283 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,54p,395b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,11n,54p,395b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb>
-Output written on Assignment2.pdf (1 page, 39565 bytes).
+pe1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y7.pfb>
+Output written on Assignment2.pdf (3 pages, 115151 bytes).
 PDF statistics:
- 21 PDF objects out of 1000 (max. 8388607)
+ 55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
