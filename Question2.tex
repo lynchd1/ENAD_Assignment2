@@ -1,11 +1,45 @@
-Q2
-
+%Question 2
 \begin{enumerate}
 	\item{
 	%Part a
+		Using KCL at the node between capacitor, resistor and inductor: 
+		$\Sigma i_{out} = 0$\\
+	
+		\begin{align*}
+		&\frac{V_o(s) - \dfrac{5}{s}}{2.5s} + \frac{V_o(s)}{2} + 
+		V_o(s)\cdot s \cdot 0.1 = 0\\
+		\implies &\frac{2\cdot V_o(s)}{5s} - \frac{2}{s^2} + 
+		\frac{V_o(s)}{2} + \frac{s \cdot V_o(s)}{10} = 0\\
+		\implies &V_o(s) \left(\frac{2}{5s} + \frac{s}{10} + 
+		\frac{1}{2} \right) = \frac{2}{s^2}\\
+		\implies &V_o(s) \left( \frac{s^2}{10} + \frac{s}{2} 
+		+ \frac{2}{5} \right) = \frac{2}{s}\\
+		\implies &V_o(s) \cdot (s^2 + 5s + 4) = \frac{20}{s}\\
+		\implies &V_o(s) = \frac{20}{s\cdot(s^2 + 5s + 4)}\\
+		\implies &V_o(s) = \frac{20}{s \cdot (s + 4) \cdot (s + 1)}
+		\end{align*}
+		Now using partial fraction expansion:
+		\begin{align*}
+		&\frac{20}{s \cdot (s + 4) \cdot (s + 1)} = \frac{A}{s} 
+		+ \frac{B}{s+4} + \frac{c}{s + 1}\\
+		\implies &A(s+4)(s+1) + B(s)(s+1) + C(s)(s+4) = 20\\
+		(s = 0) \implies &A = 5\\
+		(s = -1) \implies &12B = 20\\
+		\implies &B = \frac{5}{3}\\
+		(s = -1) \implies &-3C =20\\
+		\implies &C = \frac{-20}{3} \\
+		\implies &V_o(s) = \frac{5}{s} + \frac{5}{3(s+4)} - 
+		\frac{20}{3(s+1)} 
+		\end{align*}
 	}
 	\item{
 	%Part b
+		\begin{align*}
+		v_o(t) &= \mathcal{L}^{-1}[V_o(s)]\\
+		&= \mathcal{L}^{-1}\left[\frac{5}{s} + \frac{5}{3(s+4)} - 
+		\frac{20}{3(s+1)}\right]\\
+		&= (5 + \frac{5}{3} e^{-4t} - \frac{20}{3} e^{-t})u(t)
+		\end{align*}
 	}
 	\item{
 	%Part c
