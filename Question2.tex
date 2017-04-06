@@ -1,11 +1,44 @@
-Q2
-
 \begin{enumerate}
 	\item{
-	%Part a
+		Convert circtuit to its s-domain equivalent:
+		\\ \\
+		ADD CIRCUIT DIAGRAM BELOW
+		\\ \\
+		The circuit is a voltage divider:
+		\begin{align*}
+			V_o(s) &= V_i(s) * \frac{Z_R || Z_C}{Z_R || Z_C + Z_L} \\
+			&= \frac{5}{s} * \frac{\frac{20s}{s(2s+10)}}{\frac{20s}{s(2s+10)}+2.5s} \\
+			&= \frac{5}{s} * \frac{1}{1+0.125(2s^2+10s)} \\
+			&= \frac{5}{s(0.25s^2+1.25s+1)} \\
+			&= \frac{20}{s(s+4)(s+1)}
+		\end{align*}
+		Perform partial fraction expansion:
+		\begin{align*}
+			\frac{20}{s(s+4)(s+1)} &= \frac{A}{s} + \frac{B}{s+4} + \frac{C}{s+1} \\
+			\therefore 20 &= A(s+4)(s+1) + Bs(s+1) + Cs(s+4)
+		\end{align*}
+		Now solve for A, B and C:
+		\begin{equation*}
+			s = 0 \implies 20 = A(4)(1) \implies A = 5
+		\end{equation*}
+		\begin{equation*}
+			s = -4 \implies 20 = B(-4)(-3) \implies B = \frac{5}{3}
+		\end{equation*}
+		\begin{equation*}
+			s = -1 \implies 20 = C(-1)(3) \implies C = -\frac{20}{3}
+		\end{equation*}
+		And we arrive at $V_o(s)$ in partial fraction expanded form:
+		\begin{equation*}
+			V_o(s) = \frac{5}{s} + \frac{5}{3(s+4)} - \frac{20}{3(s+1)} \ \mathrm{V}
+		\end{equation*}
+		\\ \\
 	}
 	\item{
-	%Part b
+		Perform the inverse Laplace transform:
+		\begin{align*}
+			v_o(t) &= \mathcal{L}^{-1}\left[ V_o(s) \right] \\
+			&= \left(5 + \frac{5}{3}e^{-4t} - \frac{20}{3}e^{-t} \right) u(t) \ \mathrm{V}
+		\end{align*}
 	}
 	\item{
 	%Part c
