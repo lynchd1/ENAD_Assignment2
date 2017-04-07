@@ -29,14 +29,42 @@
 		Now perform the inverse Laplace transform:
 		\begin{align*}
 			f(t) &= \mathcal{L}^{-1}[F(s)] \\
-			&= \left(15 + 11e^{-7t} - 6e^{-3t} \right) u(t) \ \mathrm{V}
+			&= \left(15 + 11e^{-7t} - 6e^{-3t} \right) u(t)
 		\end{align*}
 	}
 	\item{
-	%Part b	
+	%Part b
+		\begin{align*}
+			F(s) &= \frac{14s^2+56s+152}{(s+6) \left(s^2+4s+20 \right)} \\
+			&= \frac{14s^2+56s+152}{(s+6)(s+2-j4)(s+2+j4)}
+		\end{align*}
+		Perform partial fraction expansion:
+		\begin{equation*}
+			\frac{14s^2+56s+152}{(s+6)(s+2-j4)(s+2+j4)} = \frac{A}{s+6} + \frac{B}{s+2-j4} + \frac{B^*}{s+2+j4}
+		\end{equation*}
+		\begin{equation*}
+			\therefore 14s^2+56s+152 = A(s+2-j4)(s+2+j4) + B(s+6)(s+2+j4) + B^*(s+6)(s+2-j4)
+		\end{equation*}
+		Now solve for A and B:
+		\begin{equation*}
+			s=-6 \implies 320 = A(-4-j4)(-4+j4) \implies A = 10
+		\end{equation*}
+		\begin{equation*}
+			s=-2+j4 \implies -128 = B(4+j4)(j8) \implies B = 2 + j2
+		\end{equation*}
+		And we arrive at $F(s)$ in partial fraction expanded form:
+		\begin{align*}
+			F(s) &= \frac{10}{s+6} + \frac{2+j2}{s+2-j4} + \frac{2-j2}{s+2+j4} \\
+			&= \frac{10}{s+6} + \frac{2\sqrt{2} \phase{45 \degree}}{s+2-j4} + \frac{2\sqrt{2} \phase{-45 \degree}}{s+2+j4}
+		\end{align*}
+		Now perform the inverse Laplace transform:
+		\begin{align*}
+			f(t) &= \mathcal{L}^{-1}[F(s)] \\
+			&= \left(10e^{-6t} + 4\sqrt{2}e^{-2t} \cos(4t + 45 \degree) \right) u(t)
+		\end{align*}
 	}
 	\item{
-	%Part c	
+	%Part c
 	}
 	
 \end{enumerate}
