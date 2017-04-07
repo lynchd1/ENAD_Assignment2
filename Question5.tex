@@ -31,6 +31,7 @@
 			f(t) &= \mathcal{L}^{-1}[F(s)] \\
 			&= \left(15 + 11e^{-7t} - 6e^{-3t} \right) u(t)
 		\end{align*}
+		\\
 	}
 	\item{
 	%Part b
@@ -47,10 +48,10 @@
 		\end{equation*}
 		Now solve for A and B:
 		\begin{equation*}
-			s=-6 \implies 320 = A(-4-j4)(-4+j4) \implies A = 10
+			s = -6 \implies 320 = A(-4-j4)(-4+j4) \implies A = 10
 		\end{equation*}
 		\begin{equation*}
-			s=-2+j4 \implies -128 = B(4+j4)(j8) \implies B = 2 + j2
+			s = -2+j4 \implies -128 = B(4+j4)(j8) \implies B = 2 + j2
 		\end{equation*}
 		And we arrive at $F(s)$ in partial fraction expanded form:
 		\begin{align*}
@@ -62,9 +63,51 @@
 			f(t) &= \mathcal{L}^{-1}[F(s)] \\
 			&= \left(10e^{-6t} + 4\sqrt{2}e^{-2t} \cos(4t + 45 \degree) \right) u(t)
 		\end{align*}
+		\\
 	}
 	\item{
 	%Part c
+		\begin{equation*}
+			F(s) = \frac{25(s+4)^2}{s^2(s+5)^2}
+		\end{equation*}
+		Perform partial fraction expansion:
+		\begin{equation*}
+			\frac{25(s+4)^2}{s^2(s+5)^2} = \frac{A}{s^2} + \frac{B}{s} + \frac{C}{(s+5)^2} + \frac{D}{s+5}
+		\end{equation*}
+		\begin{equation*}
+			\therefore 25(s+4)^2 = A(s+5)^2 + Bs(s+5)^2 + Cs^2 + Ds^2(s+5)
+		\end{equation*}
+		Now solve for A, B, C and D:
+		\begin{equation*}
+			s = -5 \implies 25 = C(-5)^2 \implies C = 1
+		\end{equation*}
+		\begin{equation*}
+			s = 0 \implies 400 = A(5)^2 \implies A = 16
+		\end{equation*}
+		\begin{equation*}
+			s = 1 \implies 625 = 36(16) + B(36) + 1 + D(6)
+		\end{equation*}
+		\begin{align}
+			\therefore 36B + 6D &= 48 \nonumber \\
+			6B + D &= 8
+		\end{align}
+		\begin{equation*}
+			s = -1 \implies 225 = 16(16) - B(16) + 1 + D(4)
+		\end{equation*}
+		\begin{align}
+			\therefore -16B + 4D &= -32 \nonumber \\
+			-4B + D &= -8
+		\end{align}
+		Solving equations (1) and (2) gives $B = \frac{8}{5}$ and $D = -\frac{8}{5}$. We then arrive at $F(s)$ in partial fraction expanded form:
+		\begin{equation*}
+			F(s) = \frac{16}{s^2} + \frac{8}{5s} + \frac{1}{(s+5)^2} - \frac{8}{5(s+5)}
+		\end{equation*}
+		Now perform the inverse Laplace transform:
+		\begin{align*}
+			f(t) &= \mathcal{L}^{-1}[F(s)] \\
+			&= \left(\frac{8}{5} + 16t + e^{-5t} \left(t - \frac{8}{5} \right) \right) u(t)
+		\end{align*}
+		\\
 	}
 	
 \end{enumerate}
