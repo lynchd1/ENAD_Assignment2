@@ -1,8 +1,36 @@
-Q5
-
 \begin{enumerate}
 	\item{
 	%Part a
+		\begin{align*}
+			F(s) &= \frac{20s^2+141s+315}{s \left(s^2+10s+21 \right)} \\
+			&= \frac{20s^2+141s+315}{s(s+7)(s+3)} \\
+		\end{align*}
+		Perform partial fraction expansion:
+		\begin{equation*}
+			\frac{20s^2+141s+315}{s(s+7)(s+3)} = \frac{A}{s} + \frac{B}{s+7} + \frac{C}{s+3}
+		\end{equation*}
+		\begin{equation*}
+			\therefore 20s^2+141s+315 = A(s+7)(s+3) + Bs(s+3) + Cs(s+7)
+		\end{equation*}
+		Now solve for A, B and C:
+		\begin{equation*}
+			s = 0 \implies 315 = A(7)(3) \implies A = 15
+		\end{equation*}
+		\begin{equation*}
+			s = -7 \implies 308 = B(-7)(-4) \implies B = 11
+		\end{equation*}
+		\begin{equation*}
+			s = -3 \implies 72 = A(-3)(4) \implies C = -6
+		\end{equation*}
+		And we arrive at $F(s)$ in partial fraction expanded form:
+		\begin{equation*}
+			F(s) = \frac{15}{s} + \frac{11}{s+7} - \frac{6}{s+3}
+		\end{equation*}
+		Now perform the inverse Laplace transform:
+		\begin{align*}
+			f(t) &= \mathcal{L}^{-1}[F(s)] \\
+			&= \left(15 + 11e^{-7t} - 6e^{-3t} \right) u(t) \ \mathrm{V}
+		\end{align*}
 	}
 	\item{
 	%Part b	
