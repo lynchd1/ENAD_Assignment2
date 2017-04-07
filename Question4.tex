@@ -1,1 +1,17 @@
-Q4
+Start by converting the output response equation to its s-domain equivalent:
+\begin{align*}
+	V_o(s) &= \mathcal{L}[v_o(t)] \\
+	&= \frac{10}{s+3} - \frac{20}{s+4} + \frac{10}{s+5} \\
+	&= \frac{10(s+4)(s+5) - 20(s+3)(s+5) + 10(s+3)(s+4)}{(s+3)(s+4)(s+5)} \\
+	&= \frac{20}{(s+3)(s+4)(s+5)}
+\end{align*}
+Now by definition, $V_i(s) = \frac{V_o(s)}{H(s)}$, therefore:
+\begin{align*}
+	V_i(s) &= \frac{20}{(s+3)(s+4)(s+5)} * \frac{(s+3)(s+4)}{2(s+5)} \\
+	&= \frac{10}{(s+5)^2}
+\end{align*}
+Now convert the input function back to the time domain:
+\begin{align*}
+	v_i(t) &= \mathcal{L}^{-1}[V_i(s)] \\
+	&= 10te^{-5t} u(t) \ \mathrm{V}
+\end{align*}
