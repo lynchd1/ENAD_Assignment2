@@ -3,12 +3,106 @@ Q5
 \begin{enumerate}
 	\item{
 	%Part a
+		\begin{align*}
+		F(s) &= \frac{20s^2 + 141s + 315}{s(s^2+10s+21)}\\
+		&= \frac{20s^2 + 141s + 315}{s(s+7)(s+3)}\\
+		\end{align*}
+		Using a partial fraction expansion on $F(s)$:
+		\begin{align*}
+		&\frac{A}{s} + \frac{B}{s+7} + \frac{C}{s+3} = 
+		\frac{20s^2 + 141s + 315}{s(s+7)(s+3)}\\
+		\implies &A(s+7)(s+3) + B(s)(s+3) + C(s)(s+7) = 
+		20s^2 + 141s + 315\\
+		(s = 0) \implies &21A = 315\\
+		\implies &A = 15\\
+		(s = -7) \implies &28B = 20(-7)^2 + 141(-7) + 315\\
+		\implies &B = \frac{20\cdot 49 + 141(-7) + 315}{28}\\
+		\implies &B = 11\\
+		(s = -3) \implies &-12C =   20(-3)^2 + 141(-3) + 315\\
+		\implies &C = \frac{20\cdot 9 + 141(-3) + 315}{-12}\\
+		\implies &C = -6\\
+		\implies &F(s) = \frac{15}{s} + \frac{11}{s+7} - 
+		\frac{6}{s+3}
+		\end{align*}
+		Finding inverse Laplace transform:
+		\begin{align*}
+		f(t) &= \mathcal{L}^{-1}[F(s)]\\
+		&= \mathcal{L}^{-1}[\frac{15}{s} + \frac{11}{s+7} - 
+		\frac{6}{s+3}]\\
+		&= (15 + 11e^{-7t}-6e^{-3t})u(t)
+		\end{align*}
 	}
 	\item{
-	%Part b	
+	%Part b
+		
+		\begin{align*}
+		F(s) &= \frac{14s^2 + 56s + 152}{(s+6)(s^2+4s+20)}\\
+		&= \frac{14s^2 + 56s + 152}{(s+6)(s^2+4s+4-4+20)}\\
+		&= \frac{14s^2 + 56s + 152}{(s+6)((s+2)^2+16)}\\
+		&= \frac{14s^2 + 56s + 152}{(s+6)(s+2+j4)(s+2-j4)}\\
+		\end{align*}
+		\newpage
+		Using a partial fraction expansion and let $A, B, 
+		B^{*}$ be constants where $B^{*}$ is the complex conjugate of $B$.
+		Then:
+		\begin{align*}
+		&\frac{A}{s+6} + \frac{B}{s+2+j4} + \frac{B^*}{s+2-j4} 
+		= \frac{14s^2 + 56s + 152}{(s+6)(s+2+j4)(s+2-j4)}\\
+		\implies &A(s+2+j4)(s+2-j4) + B(s+6)(s+2-j4) + 
+		B^*(s+6)(s+2+j4) \\
+		= &14s^2 + 56s + 152\\
+		(s = -6) \implies &A(-6+2+j4)(-6+2-j4) = 14(-6)^2 + 56(-6) + 152\\
+		\implies &32A = 320\\
+		\implies &A = 10\\
+		(s = -2-j4) \implies &B(-2-j4 + 6)(-2-j4+2-j4) = 
+		14(-2-j4)^2 + 56(-2-j4) + 152\\
+		\implies &B(-32-j32) = -128\\
+		\implies &B = \frac{4}{1 + j}\\
+		\implies &B = \frac{4 - j4}{2}\\
+		\implies &B = 2 - j2\\
+		\implies &B^* = 2 + j2\\
+		\implies &F(s) = \frac{10}{s + 6} + \frac{2-j2}{s+2+j4} + \frac{2 + j2}{s+2-j4}
+		\end{align*}
+		Want in the form $F(s) = \frac{10}{s + 6} + \frac{|K|\angle\theta}{s + \alpha - j\beta} + 
+		\frac{|K|\angle{-\theta}}{s + \alpha + j\beta}$
+		Find $B$ and $B^*$ in phasor form.
+		\begin{align*}
+		|B| = |B^*| &= \sqrt{(2^2) + (-2)^2}\\
+		&= 2\sqrt{2}\\
+		\angle{B} &= \arctan{\left( \frac{2}{-j2} \right)}\\
+		&= -45\degree\\
+		\implies \angle{B^*} &= 45\degree\\
+		\implies F(s) &= \frac{10}{s+6} + \frac{2\sqrt{2}\angle{-45\degree}}{s+2+j4}
+		+ \frac{2\sqrt{2}\angle{45\degree}}{s+2-j4}
+		\end{align*}
+		Finding inverse Laplace Transform:
+		\begin{align*}
+		f(t) &= \mathcal{L}^{-1}[F(s)]\\
+		&= \mathcal{L}^{-1}[\frac{10}{s+6} + \frac{2\sqrt{2}\angle{-45\degree}}{s+2+j4}
+		+ \frac{2\sqrt{2}\angle{45\degree}}{s+2-j4}]\\
+		&= (10e^{-6t} + 4\sqrt{2}e^{-2t}\cos{(4t + 45\degree)})u(t)
+		\end{align*}
 	}
 	\item{
 	%Part c	
+
+		$$F(s) = \frac{25(s+4)^2}{s^2(s+5)^2}$$\\
+		Using a partial fraction expansion:\\
+		Let $F(s) = \frac{A}{s} + \frac{B}{s^2} + \frac{C}{s + 5} + \frac{D}{(s+5)^2}$
+		where $A$, $B$, $C$, and $D$, are constants.
+		\begin{align*}
+		\implies &A(s)(s+5)^2 + B(s+5)^2 + C(s)^2(s+5) + D(s)^2 = 25(s+4)^2\\
+		\implies &A(s^3 + 10s^2 + 25s) + B(s^2 + 10s + 25) + 
+		C(s^3 + 5s^2) + D(s^2) = 25s^2 + 200s + 400\\
+		\end{align*}
+		Equating co-efficients gives:
+		\begin{align*}
+		A + C &= 0\\
+		10 A + B + 5C + D &= 25\\
+		25A + 10B &= 200\\
+		25B &= 400
+		\end{align*}
+
 	}
 	
 \end{enumerate}
