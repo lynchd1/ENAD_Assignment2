@@ -1,5 +1,3 @@
-Q5
-
 \begin{enumerate}
 	\item{
 	%Part a
@@ -78,8 +76,8 @@ Q5
 		Finding inverse Laplace Transform:
 		\begin{align*}
 		f(t) &= \mathcal{L}^{-1}[F(s)]\\
-		&= \mathcal{L}^{-1}[\frac{10}{s+6} + \frac{2\sqrt{2}\angle{-45\degree}}{s+2+j4}
-		+ \frac{2\sqrt{2}\angle{45\degree}}{s+2-j4}]\\
+		&= \mathcal{L}^{-1}\left[\frac{10}{s+6} + \frac{2\sqrt{2}\angle{-45\degree}}{s+2+j4}
+		+ \frac{2\sqrt{2}\angle{45\degree}}{s+2-j4}\right]\\
 		&= (10e^{-6t} + 4\sqrt{2}e^{-2t}\cos{(4t + 45\degree)})u(t)
 		\end{align*}
 	}
@@ -100,7 +98,19 @@ Q5
 		A + C &= 0\\
 		10 A + B + 5C + D &= 25\\
 		25A + 10B &= 200\\
-		25B &= 400
+		25B &= 400\\
+		\implies B &= 16\\
+		\implies A &= \frac{200-160}{25}\\
+		&= \frac{8}{5}\\
+		\implies C &= -\frac{8}{5}\\
+		\implies D &= 1\\
+		\implies F(s) &= \frac{8}{5s} + \frac{16}{s^2} + \frac{-8}{5(s + 5)} + \frac{1}{(s+5)^2}
+		\end{align*}
+		Taking the inverse Laplace transform:
+		\begin{align*}
+		f(t) &= \mathcal{L}^{-1}[F(s)]\\
+		f(t) &= \mathcal{L}^{-1}\left[\frac{8}{5s} + \frac{16}{s^2} + \frac{-8}{5(s + 5)} + \frac{1}{(s+5)^2}\right]\\
+		&= \left(\frac{8}{5} + 16t - \frac{8}{5}e^{-5t} + te^{-5t}\right)u(t)
 		\end{align*}
 
 	}
