@@ -7,14 +7,14 @@ H(s) &= \frac{2s + 10}{s^2 + 7s + 12}\\
 
 Finding the Laplace Transform of the output:
 \begin{align*}
-v_o(t) &= (10e^{-3t} - 20e^{-4t} + 10e^{-5t})u(t)\\
-V_o(s) &= \mathcal{L}[(10e^{-3t} - 20e^{-4t} + 10e^{-5t})u(t)]\\
-&= \frac{10}{s+3} - \frac{20}{s + 4} + \frac{10}{s+5}\\
+v_o(t) &= (10e^{-3t} - 20e^{-4t} + 10e^{-5t})u(t)\;V\\
+V_o(s) &= \mathcal{L}[(10e^{-3t} - 20e^{-4t} + 10e^{-5t})u(t)]\;V\\
+&= \frac{10}{s+3} - \frac{20}{s + 4} + \frac{10}{s+5}\;V\\
 &= \frac{10(s+4)(s+5) - 20(s+3)(s+5) + 
-10(s+3)(s+4)}{(s+3)(s+4)(s+5)}\\
+10(s+3)(s+4)}{(s+3)(s+4)(s+5)}\;V\\
 &= \frac{10s^2 + 90s + 200 - 20s^2 - 160s - 300 + 10s^2 + 
-70s + 120}{(s+3)(s+4)(s+5)}\\
-&= \frac{20}{(s+3)(s+4)(s+5)}
+70s + 120}{(s+3)(s+4)(s+5)}\;V\\
+&= \frac{20}{(s+3)(s+4)(s+5)}\;V
 \end{align*}
 
 Transfer function is defined by $H(s) = \frac{V_o(s)}{V_i(s)}$, 
@@ -23,12 +23,12 @@ $ V_i(s) = \frac{V_o(s)}{H(s)} $.
 
 \begin{align*}
 V_i(s) &=  \frac{V_o(s)}{H(s)}\\
-&= \frac{20}{(s+3)(s+4)(s+5)} \div \frac{2(s+5)}{(s+3)(s+4)}\\
-&= \frac{10}{(s+5)^2}
+&= \frac{20}{(s+3)(s+4)(s+5)} \div \frac{2(s+5)}{(s+3)(s+4)}\;V\\
+&= \frac{10}{(s+5)^2}\;V
 \end{align*}
 Taking inverse Laplace transform to find $v_i(t)$.
 \begin{align*}
 v_i(t) &= \mathcal{L}^{-1} [V_i(s)]\\
-&= \mathcal{L}^{-1} [\frac{10}{(s+5)^2}]\\
-&= 10t \cdot e^{-5t}
+&= \mathcal{L}^{-1} \left[\frac{10}{(s+5)^2}\right]\;V\\
+&= 10t \cdot e^{-5t}\;V
 \end{align*}

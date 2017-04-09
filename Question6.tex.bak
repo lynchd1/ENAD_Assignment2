@@ -1,10 +1,16 @@
 
 Transforming circuit to the frequency (s) domain:\\
 
-DIAGRAM NEEDED!!!!!!!!!!!\\
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.75]{6.JPG}
+\end{center}
+\end{figure}
 
+Taking $Z_{eq}$ to be the equivalent impedance of the resistor $R_L$, the capacitor and the inductor.
+	
 \begin{align*}
-z_{eq} &= \left(\frac{1}{R_L} + \frac{1}{sL + \dfrac{1}{sC}}\right)^{-1}\\
+Z_{eq} &= \left(\frac{1}{R_L} + \frac{1}{sL + \dfrac{1}{sC}}\right)^{-1}\\
 &= \left(\frac{1}{R_L} + \frac{1}{\dfrac{s^2LC + 1}{sC}}\right)^{-1}\\
 &= \left(\frac{1}{R_L} + \frac{sC}{s^2LC+1} \right)^{-1}\\
 &= \left(\frac{s^2LC+1+sR_LC}{R_L(s^2LC+1)} \right)^{-1}\\
