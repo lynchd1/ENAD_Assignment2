@@ -1,15 +1,16 @@
 \begin{enumerate}
 	\item{
 	% Part a
-		Convert circtuit to its s-domain equivalent:
-		\\ \\
-		ADD CIRCUIT DIAGRAM
-		\\ \\
+		Convert circtuit to its s domain equivalent:
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.55]{q2a.pdf}
+		\end{figure}
 		The circuit is a voltage divider:
 		\begin{align*}
-			V_o(s) &= V_i(s) * \frac{Z_R || Z_C}{Z_R || Z_C + Z_L} \\
-			&= \frac{5}{s} * \frac{\frac{20s}{s(2s+10)}}{\frac{20s}{s(2s+10)}+2.5s} \\
-			&= \frac{5}{s} * \frac{1}{1+0.125(2s^2+10s)} \\
+			V_o(s) &= V_i(s) \times \frac{Z_R || Z_C}{Z_R || Z_C + Z_L} \\
+			&= \frac{5}{s} \times \frac{\frac{20s}{s(2s+10)}}{\frac{20s}{s(2s+10)}+2.5s} \\
+			&= \frac{5}{s} \times \frac{1}{1+0.125(2s^2+10s)} \\
 			&= \frac{5}{s(0.25s^2+1.25s+1)} \\
 			&= \frac{20}{s(s+4)(s+1)}
 		\end{align*}
@@ -49,12 +50,12 @@
 
 	\item{
 	%Part c
-		UPDATE TO IMPROVE FLOW OF THIS PASSAGE FROM NOTES, also improve explanation for second paragraph...
-		\\ \\
-		Circuit elements the same, therefore $s_1, s_2$ and form of equation will remain the same. Input voltage source (forcing function) the same therefore steady state component of response will remain the same.
+		The circuit elements (R, L and C) remain the same, therefore $s_1, s_2$ and the form of equation will remain the same. 
 		\par
-		One or both of the exponential terms will change, as these are the only parts of the response equation that are determined by the initial conditions.
-		\\ \\
+		Input voltage source (forcing function) remains the same, therefore the steady state component of response will remain the same.
+		\par
+		One or both of the coefficients of the transient component terms may change, as these are the only parts of the response equation that are determined by the initial conditions.
+		\\
 	}
 
 \end{enumerate}
