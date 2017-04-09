@@ -9,12 +9,14 @@
 \usepackage{gensymb}
 \usepackage{tabu}
 \usepackage{tikz}
+\usepackage{steinmetz} % allows for phasor notation with \phase{}
 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
 
-\author{David Lynch - 758863, Daniel Landgraf, Zixiang Ren }
-\title{Electrical Network and Device Modelling Assignment 2}
+\author{David Lynch - 758863, Daniel Landgraf - 695683, Zixiang Ren - 765685}
+\title{\huge{Electrical Network Analysis and Design} \\ Assignment 2}
+\date{\small{Tuesday 2:15pm - EDS 8}}
 \begin{document}
 \maketitle
 
@@ -45,6 +47,7 @@
 		\include{Question5}
 		}
 		
+		\newpage	% current formatting results in 6. and first paragraph being on own on previous page
 		\item{
 		%Question 6
 		\let\clearpage\relax
